@@ -4,11 +4,9 @@ github_users:
   - wsharpe41
 
 github_repos:
-  - alshedivat/al-folio
   - wsharpe41/climate-legislation-viz
   - wsharpe41/Particulate-Matter-Dataset
-  - wsharpe41/us-pm-viz-and-download
   - wsharpe41/pm-map
   - wsharpe41/shortTermParticulateMeasurements
   - wsharpe41/EffectsOfEnvironmentalPolicy
-  - wsharpe41/OpcCompositionalData
+  - wsharpe41/OpcComopositionalData
