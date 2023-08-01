@@ -1,8 +1,6 @@
 ---
 layout: page
 permalink: /repositories/
-title: repositories
-description: Recent GitHub repositories including thesis code.
 nav: true
 nav_order: 3
 ---
