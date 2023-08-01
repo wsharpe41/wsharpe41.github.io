@@ -1,12 +1,14 @@
 github_users:
   - torvalds
   - alshedivat
+  - wsharpe41
 
 github_repos:
   - alshedivat/al-folio
-  - twbs/bootstrap
-  - jekyll/jekyll
-  - jquery/jquery
-  - FortAwesome/Font-Awesome
-  - jpswalsh/academicons
-  - mathjax/MathJax
+  - wsharpe41/climate-legislation-viz
+  - wsharpe41/Particulate-Matter-Dataset
+  - wsharpe41/us-pm-viz-and-download
+  - wsharpe41/pm-map
+  - wsharpe41/shortTermParticulateMeasurements
+  - wsharpe41/EffectsOfEnvironmentalPolicy
+  - wsharpe41/OpcCompositionalData

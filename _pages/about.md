@@ -19,8 +19,8 @@ selected_papers: false # includes a list of papers marked as "selected={true}"
 social: false  # includes social icons at the bottom of the page
 ---
 
-Write your biography here. Tell the world about yourself. Link to your favorite [subreddit](http://reddit.com). You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder.
+I'm a recent graduate with a Master's from MIT in Environmental Engineering. I'm interested in the intersection of data science, computer science and environmental engineering, and I'm currently looking for a job in the field. Currently I'm working on many small projects in the climate space which are available on my [projects page](/projects/) and [repositories page](/repositories/). Previously I worked in the defense industry as a model-based systems engineer at Lockheed Martin and GDIT.
 
-Put your address / P.O. box / other info right below your picture. You can also disable any of these elements by editing `profile` property of the YAML header of your `_pages/about.md`. Edit `_bibliography/papers.bib` and Jekyll will render your [publications page](/al-folio/publications/) automatically.
+At MIT my thesis was on Low-Cost Air Quality Monitoring. I developed a theoretical model to predict PM composition using an array of low-cost instruments and love to learn more about anything AQ. Please reach out if you have any questions about my work or want to collaborate on a project.
 
-Link to your social media connections, too. This theme is set up to use [Font Awesome icons](http://fortawesome.github.io/Font-Awesome/) and [Academicons](https://jpswalsh.github.io/academicons/), like the ones below. Add your Facebook, Twitter, LinkedIn, Google Scholar, or just disable all of them.
+My core technical competencies include Python, Machine Learning, Java, and SQL. I'm familiar with the Python data science ecosystem and am currently learning more about JavaScript and web development. I'm also familiar with the Agile development process and have experience working in a team environment.
