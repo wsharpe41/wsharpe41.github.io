@@ -1,8 +1,3 @@
-github_users:
-  - torvalds
-  - alshedivat
-  - wsharpe41
-
 github_repos:
   - wsharpe41/climate-legislation-viz
   - wsharpe41/Particulate-Matter-Dataset
