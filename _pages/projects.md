@@ -6,7 +6,7 @@ description: Personal and team projects from the past year.
 nav: true
 nav_order: 2
 display_categories: [work]
-horizontal: true
+horizontal: false
 ---
 
 <!-- pages/projects.md -->
