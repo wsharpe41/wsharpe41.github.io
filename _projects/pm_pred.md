@@ -1,7 +1,7 @@
 ---
 layout: page
-title: PM2.5 Prediction
-description: Project testing various RNNs for short term PM2.5 prediction in the US
+title: PM2.5 Pred
+description: Project testing various RNNs for short term PM2.5 prediction
 img: assets/rnn/rnn_predictions.PNG
 importance: 2
 category: work

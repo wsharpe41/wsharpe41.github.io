@@ -5,7 +5,6 @@ description: Graduate Thesis on using low-cost air sensors and ML to predict PM 
 img: assets/thesis/software_arch.PNG
 importance: 1
 category: work
-related_publications: Sharpe-willjsh-MEng-CEE-2023-thesis
 ---
 
 # Abstract
@@ -59,7 +58,7 @@ well as future scientific work.
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/thesis/lab_setup.png" title="Lab Setup" class="img-fluid rounded z-depth-1" %}
+        {% include figure.html path="assets/thesis/lab_setup.PNG" title="Lab Setup" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 <div class="caption">
