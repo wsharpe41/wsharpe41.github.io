@@ -4,7 +4,7 @@ permalink: /repositories/
 title: github repositories
 description: Recent GitHub repositories including thesis code.
 nav: true
-nav_order: 3
+nav_order: 4
 ---
 
 
