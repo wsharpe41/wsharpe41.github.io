@@ -12,9 +12,6 @@ Simple python script which creates a video and gif showing the pm2.5 values in u
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        <img src="assets/video/plots_animation.gif">
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
         {% include figure.html path="assets/video/plots_animation.gif" title="PM Gif" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
