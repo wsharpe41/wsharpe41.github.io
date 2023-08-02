@@ -3,7 +3,7 @@ layout: page
 title: US PM Visualization
 description: Video of US PM2.5 concentrations over time with information from OpenAQ
 img:
-importance: 3
+importance: 4
 category: work
 ---
 
