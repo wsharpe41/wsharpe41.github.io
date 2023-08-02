@@ -1,7 +1,7 @@
 ---
 layout: page
-title: PM Composition using Low-Cost Air Quality Monitors
-description: Graduate Thesis on using OPCs and ML to predict PM composition
+title: PM Composition using OPCs
+description: Graduate Thesis on using low-cost air sensors and ML to predict PM composition
 img: assets/img/12.jpg
 importance: 1
 category: work
