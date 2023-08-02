@@ -2,79 +2,26 @@
 layout: page
 title: US PM Dataset
 description: Collected dataset of EPA, and Low-Cost air quality monitors for the past year
-img: assets/img/1.jpg
+img:
 importance: 3
 category: work
 ---
 
-Every project has a beautiful feature showcase page.
-It's easy to include images in a flexible 3-column grid format.
-Make your photos 1/3, 2/3, or full width.
+# Particulate-Matter-Dataset
+This project provides a method to create a dataset for PM2.5 along with associated climate variables and upload that database to a SQL database (SQLite shown).
 
-To give your project a background in the portfolio page, just add the img tag to the front matter like so:
+# Data
+This makes use of the OpenAQ API (https://api.openaq.org), the Open Elevation api (https://api.open-elevation.com), and the Historical Weather API (https://open-meteo.com/en/docs/).
+The OpenAQ API is used to get PM2.5 values, their associated time of measure, and longitudes and latitudes of various sensors and low-cost PM monitors.
+This data is split in the database into "Site" objects which contain coordinates as well as elevations, and "Measurement" objects which contain values, times, and other climate variables for those times.
+The Open Elevation API finds associated elevations with those sites. 
+The Historical Weather API adds data on wind, rh, temperature, and rain to each measurement. These variables were chosen based on previously published work indicating these variables may be helpful in better predicting future PM values. This data is available with a 5 day lag.
 
-    ---
-    layout: page
-    title: project
-    description: a project with a background image
-    img: /assets/img/12.jpg
-    ---
+## Dataset
+A dataset with this information for ~9 months is available on Kaggle: https://www.kaggle.com/datasets/willsharpe/us-particulate-matter-with-climatic-variables-2023
 
-<div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/1.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/3.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    Caption photos easily. On the left, a road goes through a tunnel. Middle, leaves artistically fall in a hipster photoshoot. Right, in another hipster photoshoot, a lumberjack grasps a handful of pine needles.
-</div>
-<div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    This image can also have a caption. It's like magic.
-</div>
+## Current Setup
+Currently the code shows a setup to collect the measurments from 750 sites in the US for a 10 day span in May 2023, with a max of 750 measurments per site. These values were chosen with some of the restrictions with the OpenAQ API in mind. I have seen request timeouts with my API calls when using less than 100 sites (408 response) and connection timeouts when trying to get more that 1000 measurements at once (504 response). The data range was chosen so that no one site would have more than 750 measurements in the time, and thus all data could be collected without worry.
 
-You can also put regular text between your rows of images.
-Say you wanted to write a little bit about your project before you posted the rest of the images.
-You describe how you toiled, sweated, *bled* for your project, and then... you reveal its glory in the next row of images.
-
-
-<div class="row justify-content-sm-center">
-    <div class="col-sm-8 mt-3 mt-md-0">
-        {% include figure.html path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm-4 mt-3 mt-md-0">
-        {% include figure.html path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    You can also have artistically styled 2/3 + 1/3 images, like these.
-</div>
-
-
-The code is simple.
-Just wrap your images with `<div class="col-sm">` and place them inside `<div class="row">` (read more about the <a href="https://getbootstrap.com/docs/4.4/layout/grid/">Bootstrap Grid</a> system).
-To make images responsive, add `img-fluid` class to each; for rounded corners and shadows use `rounded` and `z-depth-1` classes.
-Here's the code for the last row of images above:
-
-{% raw %}
-```html
-<div class="row justify-content-sm-center">
-    <div class="col-sm-8 mt-3 mt-md-0">
-        {% include figure.html path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm-4 mt-3 mt-md-0">
-        {% include figure.html path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-```
-{% endraw %}
+# Usage
+I have created one function for each API interface. They should be run in the order shown in main.py (get_sites, get_elevation, get_environmental_vars) as each call using information from the previous call. The create_tables script should only need to be called once, and would have to be modified if a database besides SQLite were desired. The populate_db function would also need to be slightly modified if a different SQL database were used. 

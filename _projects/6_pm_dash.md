@@ -8,9 +8,8 @@ category: work
 ---
 
 This project is a simple dashboard which shows various state and US national climate goals and compares them to reality. It is a work in progress and will be updated as new data becomes available. This was developed in Python primarily using Dash, Plotly, and Flask.
-
-<h3>National Data</h3>
 <br>
+<h3>National Data</h3>
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
         {% include figure.html path="assets/us_climate_viz/national_sector.png" title="National GHG Sectors" class="img-fluid rounded z-depth-1" %}
@@ -30,6 +29,7 @@ This project is a simple dashboard which shows various state and US national cli
 </div>
 
 The above images show some of the national level data on the dashboard for years 1990 to 2021 with all numbers in millions of metric tons of CO2 equivalent. You can see that electrical power is the largest source national, and Texas produces far and away the most emissions for the entire time frame. The dashboard itself is interactive and allows you to get precise values, and filter out certain states on these charts.
+<br>
 <br>
 <h3>State Data</h3>
 
