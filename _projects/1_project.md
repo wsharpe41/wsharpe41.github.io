@@ -1,8 +1,8 @@
 ---
 layout: page
 title: Low-Cost PM Composition
-description: Graduate Thesis on using low-cost air sensors and ML to predict PM composition. Thesis available at PDF link.
-img: assets/img/12.jpg
+description: Graduate Thesis on using low-cost air sensors and ML to predict PM composition. Thesis available on request.
+img: assets/thesis/software_arch.PNG
 importance: 1
 category: work
 related_publications: Sharpe-willjsh-MEng-CEE-2023-thesis
