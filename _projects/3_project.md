@@ -1,9 +1,9 @@
 ---
 layout: page
-title: project 3
-description: a project that redirects to another website
+title: Climate Policy Visualization
+description: Class Project to visualize effects of various climate policies on global enivronmental indicators
 img: assets/img/7.jpg
-redirect: https://unsplash.com
+redirect:
 importance: 3
 category: work
 ---

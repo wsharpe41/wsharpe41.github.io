@@ -1,7 +1,7 @@
 ---
 layout: page
-title: project 2
-description: a project with a background image and giscus comments
+title: PM2.5 Prediction using RNNs
+description: Project testing various RNNs for short term PM2.5 prediction in the US
 img: assets/img/3.jpg
 importance: 2
 category: work
