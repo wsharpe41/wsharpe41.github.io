@@ -2,7 +2,7 @@
 layout: page
 title: PM2.5 Prediction
 description: Project testing various RNNs for short term PM2.5 prediction in the US
-img: assets/img/3.jpg
+img: 
 importance: 2
 category: work
 giscus_comments: true

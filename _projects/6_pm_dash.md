@@ -3,7 +3,7 @@ layout: page
 title: US Climate Policy
 description: Simple dashboard visalualizing GHG goals and reality in US States
 img: assets/us_climate_viz/national_sector.png
-importance: 3
+importance: 2
 category: work
 ---
 

@@ -1,81 +1,67 @@
 ---
 layout: page
-title: PM Composition using OPCs
-description: Graduate Thesis on using low-cost air sensors and ML to predict PM composition
+title: Low-Cost PM Composition
+description: Graduate Thesis on using low-cost air sensors and ML to predict PM composition. Thesis available at PDF link.
 img: assets/img/12.jpg
 importance: 1
 category: work
-related_publications:
+related_publications: Sharpe-willjsh-MEng-CEE-2023-thesis
 ---
 
-Every project has a beautiful feature showcase page.
-It's easy to include images in a flexible 3-column grid format.
-Make your photos 1/3, 2/3, or full width.
-
-To give your project a background in the portfolio page, just add the img tag to the front matter like so:
-
-    ---
-    layout: page
-    title: project
-    description: a project with a background image
-    img: /assets/img/12.jpg
-    ---
+# Abstract
+<p>Particulate matter (PM) is a serious threat to human health and contributes to
+millions of premature deaths a year globally. Access to source attribution and compositional data of PM can have many benefits from easier regulation to enabling a better understanding of the negative health effects associated with PM. Acquiring compositional data for ambient PM generally has a high associated cost and is done using complex instrumentation, manual postprocessing, and labor intensive lab work. 
+These approaches produce very high quality data, but have low spatiotemporal resolution
+and a high cost. 
+This work explores a novel method to generate basic compositional
+data for ambient PM with low-cost, easily deployable apparatuses in concert with a
+simple fully connected neural net. 
+Simulated effects of thermal denuders as well as
+dryers/humidifiers are used to perturb aerosols before they enter simulated low-cost
+optical particle counters (OPCs). This provides information on the volatility and
+hygroscopicity of the aerosols. These OPC outputs are processed programmatically
+and fed into a neural net to classify what category an incoming aerosol belongs to.</p>
+<p>
+This method is run for both compound-derived categories which mimic real PM sources
+(Sea Salt, Biomass Burning, Dust, and Urban Smog), and property-derived aerosols
+which present more idealized conditions. The results of this method are near-perfect
+classification for single mode aerosol distributions and over 90% correct classification
+for two mode aerosol distributions. The results on the property-derived aerosols have
+shown robustness to changing aerosol properties, as well as to changing apparatus
+and ambient conditions. This work provides proof of concept for future real world
+experiments to verify this method and presents an experimental setup for this purpose.
+Having access to compositional data for ambient PM should allow access to PM
+sources at a very high spatiotemporal resolution for a relatively low price. This basic
+source attribution could provide the data needed for better informed regulation as
+well as future scientific work.
+</p>
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/1.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/3.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+        {% include figure.html path="assets/thesis/software_arch.PNG" title="Model" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 <div class="caption">
-    Caption photos easily. On the left, a road goes through a tunnel. Middle, leaves artistically fall in a hipster photoshoot. Right, in another hipster photoshoot, a lumberjack grasps a handful of pine needles.
+    High level overview of simulation model.
 </div>
+
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+        {% include figure.html path="assets/thesis/compound_derived_double.png" title="Compound Derived" class="img-fluid rounded z-depth-1" %}
+    </div>
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.html path="assets/thesis/property_derived_all.png" title="Property Derived" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 <div class="caption">
-    This image can also have a caption. It's like magic.
+    Model categorization confusion matrix for all bimodal flows, showing an overall accuracy of greater than 94%.
 </div>
 
-You can also put regular text between your rows of images.
-Say you wanted to write a little bit about your project before you posted the rest of the images.
-You describe how you toiled, sweated, *bled* for your project, and then... you reveal its glory in the next row of images.
-
-
-<div class="row justify-content-sm-center">
-    <div class="col-sm-8 mt-3 mt-md-0">
-        {% include figure.html path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm-4 mt-3 mt-md-0">
-        {% include figure.html path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.html path="assets/thesis/lab_setup.png" title="Lab Setup" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 <div class="caption">
-    You can also have artistically styled 2/3 + 1/3 images, like these.
+    Cartoon representation of labratory setup built to verify simulation model.
 </div>
-
-
-The code is simple.
-Just wrap your images with `<div class="col-sm">` and place them inside `<div class="row">` (read more about the <a href="https://getbootstrap.com/docs/4.4/layout/grid/">Bootstrap Grid</a> system).
-To make images responsive, add `img-fluid` class to each; for rounded corners and shadows use `rounded` and `z-depth-1` classes.
-Here's the code for the last row of images above:
-
-{% raw %}
-```html
-<div class="row justify-content-sm-center">
-    <div class="col-sm-8 mt-3 mt-md-0">
-        {% include figure.html path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm-4 mt-3 mt-md-0">
-        {% include figure.html path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-```
-{% endraw %}
