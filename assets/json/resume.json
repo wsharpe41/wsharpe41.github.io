@@ -1,37 +1,51 @@
 {
   "basics": {
-    "name": "Albert Einstein",
-    "label": "Scientist",
+    "name": "William Sharpe",
+    "label": "Engineer",
     "image": "",
-    "email": "albert@einstein.de",
-    "phone": "(912) 123-4567",
-    "url": "https://alshedivat.github.io/al-folio/",
-    "summary": "A German-born theoretical physicist, widely ranked among the greatest and most influential scientists of all time",
+    "email": "wjsharpe41@gmail.com",
+    "summary": "Recent Master's graduate with experience in aerospace and environmental engineering. Seeking a position in the climate tech industry.",
     "location": {
-      "address": "2712 Broadway St",
-      "postalCode": "CA 94115",
-      "city": "San Francisco",
+      "city": "Cambridge",
       "countryCode": "US",
-      "region": "California"
-    },
-    "profiles": [
-      {
-        "network": "Twitter",
-        "username": "AlbertEinstein",
-        "url": "https://twitter.com/AlbertEinstein"
-      }
-    ]
+      "region": "Massachusetts"
+    }
   },
   "work": [
     {
-      "name": "Institute for Advanced Study, Princeton University",
-      "position": "Professor of Theoretical Physics",
-      "url": "https://example.com",
-      "startDate": "1933-01-01",
-      "endDate": "1955-01-01",
-      "summary": "Teaching at Palmer Physical Laboratory (now 302 Frist Campus Center). While not a professor at Princeton, I associated with the physics professors and continued to give lectures on campus.",
+      "name": "Kroll Group (MIT)",
+      "position": "Graduate Student",
+      "startDate": "2022-09-01",
+      "endDate": "2023-05-31",
+      "summary": "Performing graduate research on low-cost air quality monitoring and machine learning",
       "highlights": [
-        "Relativity"
+        "Generated, processed, stored, and applied machine learning to environmental dataset for use in academic research",
+        "Created PostgreSQL database to store generated data efficiently",
+        "Utilized cloud computing to more efficiently generate data",
+        "Developed simulation models for the effects of lab instruments on low cost air quality sensor readings",
+        "Utilized machine learning to accurately classify optical particle counter (OPC) inputs by aerosol type, and estimate chemical properties in Python using scikit-learn and TensorFlow",
+        "Tested a wide array of different machine learning models to find best fit",
+        "Wrote code simply and documented development work for future group members using Notion",
+        "Effectively synthesized and regularly presented research results to 10-20 fellow engineers",
+        "Designed lab setup which mirrored created simulation to close sim-to-real gap"
+      ]
+    },
+    {
+      "name": "Kroll Group (MIT)",
+      "position": "Graduate Student",
+      "startDate": "2022-09-01",
+      "endDate": "2023-05-31",
+      "summary": "Performing graduate research on low-cost air quality monitoring and machine learning",
+      "highlights": [
+        "Generated, processed, stored, and applied machine learning to environmental dataset for use in academic research",
+        "Created PostgreSQL database to store generated data efficiently",
+        "Utilized cloud computing to more efficiently generate data",
+        "Developed simulation models for the effects of lab instruments on low cost air quality sensor readings",
+        "Utilized machine learning to accurately classify optical particle counter (OPC) inputs by aerosol type, and estimate chemical properties in Python using scikit-learn and TensorFlow",
+        "Tested a wide array of different machine learning models to find best fit",
+        "Wrote code simply and documented development work for future group members using Notion",
+        "Effectively synthesized and regularly presented research results to 10-20 fellow engineers",
+        "Designed lab setup which mirrored created simulation to close sim-to-real gap"
       ]
     }
   ],
