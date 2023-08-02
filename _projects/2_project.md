@@ -8,74 +8,35 @@ category: work
 giscus_comments: true
 ---
 
-Every project has a beautiful feature showcase page.
-It's easy to include images in a flexible 3-column grid format.
-Make your photos 1/3, 2/3, or full width.
+# Short Term Particulate Measurements
+The EPA's IMPROVE and CSN networks are the USAs primary provider of accuract PM data. One drawback to these networks is that they require postprocessing of their data, which can take a few days time. Thus data is always a few days behind. This project uses RNN architectures to try to close that gap and predict real-time PM2.5 hourly concentrations based off of previously reported values.
 
-To give your project a background in the portfolio page, just add the img tag to the front matter like so:
+# Data
+Data was from a kaggle dataset showing hourly concentrations from 2014-2015 for all US monitoring sites (~8 million data points). High level statistics from 2014 were used and data from 2015 was used for training and testing. Outliers were detected and taken out based on validation accuracy increases.
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.html path="assets/rnn/site_data.PNG" title="Example Data" class="img-fluid rounded z-depth-1" %}
+    </div>
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.html path="assets/rnn/anomaly_detection.PNG" title="Anomaly Detection" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
+<div class="caption">
+    Example data from one monitoring site on left. The data is hourly and shows the PM2.5 concentration in ug/m^3.
+    Anomaly detection results on right. The red dots are the data points which were removed, values are in ug/m^3.
+</div>
 
-    ---
-    layout: page
-    title: project
-    description: a project with a background image
-    img: /assets/img/12.jpg
-    ---
+# Models
+All models were created with PyTorch and hyperparameters were tuned with Ray Tune. GRUs, LSTMs, and Vanilla RNNs were tested. Different prediction and data point lengths were also tested, in the end the best predictions came from using the past seven days to predict the next 3 days. The best performing model was a GRU with one recurrent layer and three dense layers trained for 100 epochs.
+
+## Model Performance
+The model was able to capture most of the variance in PM2.5, but had a hard time with extreme values. This makes sense since many of these events would be expected to be either a chance event (such as a truck driving by) or an annual event such as a forest fire. The past seven days of measurements would be unlikely to predict these scenarios.
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/1.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/3.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+        {% include figure.html path="assets/rnn/rnn_predictions.PNG" title="Model Performance" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 <div class="caption">
-    Caption photos easily. On the left, a road goes through a tunnel. Middle, leaves artistically fall in a hipster photoshoot. Right, in another hipster photoshoot, a lumberjack grasps a handful of pine needles.
+    Model prediction results. RMSE for each prediction ended at 5.01 ug/m^3, which is roughly in line with existing published models.
 </div>
-<div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    This image can also have a caption. It's like magic.
-</div>
-
-You can also put regular text between your rows of images.
-Say you wanted to write a little bit about your project before you posted the rest of the images.
-You describe how you toiled, sweated, *bled* for your project, and then... you reveal its glory in the next row of images.
-
-
-<div class="row justify-content-sm-center">
-    <div class="col-sm-8 mt-3 mt-md-0">
-        {% include figure.html path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm-4 mt-3 mt-md-0">
-        {% include figure.html path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    You can also have artistically styled 2/3 + 1/3 images, like these.
-</div>
-
-
-The code is simple.
-Just wrap your images with `<div class="col-sm">` and place them inside `<div class="row">` (read more about the <a href="https://getbootstrap.com/docs/4.4/layout/grid/">Bootstrap Grid</a> system).
-To make images responsive, add `img-fluid` class to each; for rounded corners and shadows use `rounded` and `z-depth-1` classes.
-Here's the code for the last row of images above:
-
-{% raw %}
-```html
-<div class="row justify-content-sm-center">
-    <div class="col-sm-8 mt-3 mt-md-0">
-        {% include figure.html path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm-4 mt-3 mt-md-0">
-        {% include figure.html path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-```
-{% endraw %}
