@@ -2,28 +2,31 @@
   type: map
   contents:
     - name: Full Name
-      value: Albert Einstein
+      value: William Sharpe
     - name: Date of Birth
-      value: 14th March 1879
+      value: 25th March 1997
     - name: Languages
-      value: English, German
+      value: English
 
 - title: Education
   type: time_table
   contents:
-    - title: PhD
-      institution: University of Zurich, Zurich, Switzerland
-      year: 1905
+    - title: MEng in Environmental Engineering
+      institution: Massachusetts Institue of Technology
+      year: 2023
       description:
-        - Description 1.
-        - Description 2.
-        - title: Description 3.
+        - Climate, Environmental and Sustainability focused one year program
+        - title: Courses
           contents:
-            - Sub-description 1.
-            - Sub-description 2.
-    - title: Federal teaching diploma
+           - Machine Learning for Engineering Design
+           - Atmospheric Chemistry
+           - Global Change Science
+           - Machine Learning for Sustainable Systems
+           - Engineering Computation and Data Science
+        
+    - title: Bachelor's of Science in Aerospace Engineering
       institution: Eidgenössische Technische Hochschule, Zurich, Switzerland
-      year: 1900
+      year: 2019
       description:
         - Description 1.
         - Description 2.
