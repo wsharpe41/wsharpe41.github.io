@@ -7,7 +7,7 @@ importance: 3
 category: work
 ---
 
-This project is a simple dashboard which shows various state and US national climate goals and compares them to reality. It is a work in progress and will be updated as new data becomes available. This was developed in Python primarily using Dash, Plotly, and Flask.
+This project is a simple dashboard which shows various state and US national climate goals and compares them to reality. It is a work in progress and will be updated as new data becomes available. This was developed in Python primarily using Dash, Plotly, and Flask. A live version of the dashboard can be spun up using the associated GitHub repo here: https://github.com/wsharpe41/climate-legislation-viz. I also used this data for the capstone project of the Google Data Analytics course in the form of a notebook. This version has increased analysis and can be found here: https://www.kaggle.com/code/willsharpe/us-ghg-breakdown-capstone .
 <br>
 <h3>National Data</h3>
 <div class="row">
