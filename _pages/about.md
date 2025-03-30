@@ -18,8 +18,6 @@ selected_papers: false # includes a list of papers marked as "selected={true}"
 social: false  # includes social icons at the bottom of the page
 ---
 
-I'm a recent graduate with a Master's from MIT in Environmental Engineering. I'm interested in the intersection of data science, computer science and environmental engineering, and I'm currently looking for a job in the field. Currently I'm working on many small projects in the climate space which are available on my [projects page](/projects/) and [repositories page](/repositories/). Previously I worked in the defense industry as a model-based systems engineer at Lockheed Martin and GDIT.
+Hello! I'm a data engineer with State Farm, interested in the intersection of data science, computer science and environmental engineering. I have previous experience in professional research at the Atmospheric Science Investigator Led Processing System (ASIPS), and academic experience from my Master's in Environmental Engineering from MIT. Outside of my full time position I'm currently working small projects in the climate space which are available on my [projects page](/projects/) and [repositories page](/repositories/).
 
-At MIT my thesis was on Low-Cost Air Quality Monitoring. I developed a theoretical model to predict PM composition using an array of low-cost instruments and love to learn more about anything AQ. Please reach out if you have any questions about my work or want to collaborate on a project.
-
-My core technical competencies include Python, Machine Learning, Java, and SQL. I'm familiar with the Python data science ecosystem and am currently learning more about JavaScript and web development. I'm also familiar with the Agile development process and have experience working in a team environment.
+I'm looking to get involved in larger scale open-source projects involving climate change, so please reach out if you have anything you think I might me able to help with! My core technical competencies include Python, Machine Learning, SQL and the Geospatial Toolkit.
